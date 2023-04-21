@@ -13,14 +13,14 @@ import org.springframework.web.bind.annotation.*;
  */
 @RestController
 @Slf4j
-
 @CrossOrigin
+@RequestMapping("/login")
 public class UserController {
     @Autowired
     private UserService userService;
 
 
-    @PostMapping("/login/code")
+    @PostMapping("/code")
     public Result loginByPhone(
 
             @RequestBody User loginParam
@@ -29,7 +29,7 @@ public class UserController {
     }
 
 
-    @PostMapping("/login/password")
+    @PostMapping("/password")
     public Result loginByPassword(
 
             @RequestBody

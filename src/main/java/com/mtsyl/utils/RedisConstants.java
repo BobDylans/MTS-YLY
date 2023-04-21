@@ -8,6 +8,7 @@ public class RedisConstants {
     public static final String USER_TOKEN = "user:token:";
     public static final String PHONE_CODE = "phone:code:";
     public static final Long CACHE_NULL_TTL = 2L;
+    public static final String IMAGE_UPLOAD_DIR = "D:\\lesson\\nginx-1.18.0\\html\\hmdp\\imgs\\";
 
     public static final Long CACHE_SHOP_TTL = 30L;
     public static final String CACHE_SHOP_KEY = "cache:shop:";

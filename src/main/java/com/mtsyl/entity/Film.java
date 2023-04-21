@@ -22,6 +22,10 @@ public class Film {
 
     private String images;
 
-    private int film_type_id;
+    private int typeId;
+
+    private String startTime;
+
+    private Integer duration;
 
 }

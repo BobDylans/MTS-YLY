@@ -8,12 +8,18 @@ import lombok.Data;
 @TableName("tb_voucher")
 public class Voucher {
     private Long id;
+
     @TableField("film_id")
     private int filmId;
+
     private String title;
+
     private String rules;
+
     @TableField("pay_value")
     private int payValue;
+
+
     @TableField("actual_value")
     private int actualValue;
 }
