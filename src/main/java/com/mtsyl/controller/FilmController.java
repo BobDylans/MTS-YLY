@@ -26,31 +26,36 @@ public class FilmController {
     @Autowired
     FilmTypeService filmTypeService;
 
+    //根据id查询
     @GetMapping("/get{id}")
     public Result getFilm(@PathVariable Long id){
         Film film = filmService.getById(id);
 
         return Result.ok(film);
     }
+    //分页查询全部
     @GetMapping("/getAll/{pageId}/{limit}")
     public Result getAllFilm(@PathVariable int page,@PathVariable int limit){
         //分页查询
         Page<Film> page1 = filmService.page(new Page<>(page, limit));
         return Result.ok(page1);
     }
+    //新增电影
     @PostMapping("/add")
     public Result addFilm(@RequestBody Film film){
         filmService.save(film);
         return Result.ok();
     }
 
+
+    //删除电影
     @GetMapping("/film/delete/{id}")
     public Result deleteFilm(@PathVariable Long id){
         filmService.removeById(id);
         return Result.ok();
     }
 
-
+    //根据电影类型进行查询
     @GetMapping("/getByType/{typeId}")
     public Result getByType(@PathVariable Integer typeId){
         LambdaQueryWrapper<Film> wrapper=new LambdaQueryWrapper<>();

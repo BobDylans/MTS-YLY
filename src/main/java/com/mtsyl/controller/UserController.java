@@ -20,6 +20,7 @@ public class UserController {
     private UserService userService;
 
 
+    //用户的增删改查操作
     @PostMapping("/code")
     public Result loginByPhone(
 
@@ -63,4 +64,5 @@ public class UserController {
     ) {
         return userService.forgetPassword(loginParam);
     }
+
 }

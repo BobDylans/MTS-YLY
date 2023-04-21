@@ -29,6 +29,7 @@ public class OrderController {
 
 
 
+    //分页查询所有订单
     @GetMapping("/getOrders/{page}/{limit}")
     public Result getOrders(@PathVariable int page,@PathVariable int limit){
         //分页查询
@@ -36,6 +37,7 @@ public class OrderController {
         return Result.ok(page1);
     }
 
+    //新增订单
     @PostMapping("/addOrder")
     public Result addOrder(@RequestBody VoucherOrder voucherOrder){
 
@@ -44,6 +46,7 @@ public class OrderController {
         wrapper.eq(Film::getId,voucherOrder.getFilmId());
         Film film = filmService.getOne(wrapper);
         voucherOrder.setEndTime(film.getStartTime());
+        //并将电影票减一
         boolean success = filmService.update()
                 .setSql("tickets = tickets-1")
                 .eq("id", voucherOrder.getFilmId())

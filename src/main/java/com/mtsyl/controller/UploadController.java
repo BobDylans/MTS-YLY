@@ -16,6 +16,8 @@ import static com.mtsyl.utils.RedisConstants.IMAGE_UPLOAD_DIR;
 @RequestMapping("/upload")
 @Slf4j
 public class UploadController {
+    //上传图片,其中 IMAGE_UPLOAD_DIR = "D:\\lesson\\nginx-1.18.0\\html\\hmdp\\imgs\\";
+    //根据自己的电脑来改
     @PostMapping("/image")
     public Result uploadImage(@RequestParam("file")MultipartFile image){
         try{
@@ -32,6 +34,7 @@ public class UploadController {
             throw new RuntimeException("文件上传失败", e);
         }
     }
+    //删除图片
     @GetMapping("/blog/delete")
     public Result deleteBlogImg(@RequestParam("name") String filename) {
         File file = new File(IMAGE_UPLOAD_DIR, filename);
@@ -41,6 +44,8 @@ public class UploadController {
         FileUtil.del(file);
         return Result.ok();
     }
+
+    //随即生成图片名
     private String createNewFileName(String originalFilename) {
         // 获取后缀
         String suffix = StrUtil.subAfter(originalFilename, ".", true);
