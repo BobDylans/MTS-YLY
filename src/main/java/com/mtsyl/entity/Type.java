@@ -5,7 +5,7 @@ import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.Data;
 
 @Data
-@TableName("film_type")
+@TableName("tb_film_type")
 public class Type {
     private Long id;
     @TableField("type_id")

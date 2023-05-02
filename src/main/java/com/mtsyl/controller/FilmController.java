@@ -9,12 +9,12 @@ import com.mtsyl.entity.Type;
 import com.mtsyl.service.FilmService;
 import com.mtsyl.service.FilmTypeService;
 import com.mtsyl.service.TypeService;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.sql.ClientInfoStatus;
 import java.util.List;
-
 @RestController
 @RequestMapping("/film")
 public class FilmController {
@@ -27,13 +27,14 @@ public class FilmController {
     FilmTypeService filmTypeService;
 
     //根据id查询
-    @GetMapping("/get{id}")
+    @GetMapping("/get/{id}")
     public Result getFilm(@PathVariable Long id){
         Film film = filmService.getById(id);
 
         return Result.ok(film);
     }
     //分页查询全部
+
     @GetMapping("/getAll/{pageId}/{limit}")
     public Result getAllFilm(@PathVariable int page,@PathVariable int limit){
         //分页查询
@@ -59,7 +60,7 @@ public class FilmController {
     @GetMapping("/getByType/{typeId}")
     public Result getByType(@PathVariable Integer typeId){
         LambdaQueryWrapper<Film> wrapper=new LambdaQueryWrapper<>();
-        wrapper.eq(Film::getTypeId,typeId);
+        wrapper.eq(Film::getType,typeId);
         List<Film> filmList = filmService.list(wrapper);
         return Result.ok(filmList);
     }

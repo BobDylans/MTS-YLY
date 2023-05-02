@@ -5,6 +5,7 @@ import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.springframework.lang.Nullable;
 
 import java.sql.Timestamp;
 
@@ -25,6 +26,7 @@ public class User {
     private String phone;
 
     private String password;
-    private int code;
+    private String openId;
+
 
 }

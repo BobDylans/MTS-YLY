@@ -8,7 +8,7 @@ import com.mtsyl.entity.Voucher;
 import com.mtsyl.entity.VoucherOrder;
 import com.mtsyl.service.FilmService;
 import com.mtsyl.service.VoucherOrderService;
-import net.bytebuddy.utility.nullability.AlwaysNull;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -45,7 +45,7 @@ public class OrderController {
         LambdaQueryWrapper<Film> wrapper=new LambdaQueryWrapper();
         wrapper.eq(Film::getId,voucherOrder.getFilmId());
         Film film = filmService.getOne(wrapper);
-        voucherOrder.setEndTime(film.getStartTime());
+        voucherOrder.setEndTime(film.getStart());
         //并将电影票减一
         boolean success = filmService.update()
                 .setSql("tickets = tickets-1")

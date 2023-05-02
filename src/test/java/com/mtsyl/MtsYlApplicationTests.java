@@ -17,10 +17,7 @@ class MtsYlApplicationTests {
     void contextLoads() {
         System.out.println(userService.list());
     }
-    @Test
-    void test2(){
-        userService.sendMsg("15138009985");
-    }
+
 
 
 }

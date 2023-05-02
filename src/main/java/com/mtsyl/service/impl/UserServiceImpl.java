@@ -1,133 +1,102 @@
 package com.mtsyl.service.impl;
 
+import cn.hutool.http.HttpUtil;
 import com.alibaba.fastjson2.JSON;
 import com.aliyuncs.utils.StringUtils;
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.mtsyl.common.Result;
+import com.mtsyl.entity.LoginInfo;
 import com.mtsyl.entity.User;
+import com.mtsyl.entity.WXAuth;
 import com.mtsyl.mapper.UserMapper;
+import com.mtsyl.service.LoginInfoService;
 import com.mtsyl.service.UserService;
 import com.mtsyl.utils.MD5Util;
 import com.mtsyl.utils.SMSUtils;
 import com.mtsyl.utils.ValidateCodeUtils;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.stereotype.Service;
 import org.springframework.util.ObjectUtils;
 
 import javax.annotation.Resource;
+import java.util.HashMap;
 import java.util.List;
+import java.util.UUID;
 import java.util.concurrent.TimeUnit;
 
-import static com.mtsyl.utils.RedisConstants.PHONE_CODE;
-import static com.mtsyl.utils.RedisConstants.USER_TOKEN;
+import static com.mtsyl.utils.RedisConstants.*;
 
 @Service
 @Slf4j
 public class UserServiceImpl extends ServiceImpl<UserMapper,User> implements UserService {
 
-    @Resource
-    private StringRedisTemplate stringRedisTemplate;
+    @Autowired
+    LoginInfoService loginInfoService;
+    @Autowired
+    WxService wxService;
+
+
+    private static final String appid ="wx4d0bf0137e54de77";
+    private static final String secret="fb20f9420989effbd6ffe3ad6c768f2d";
+
 
     @Override
-    public Result Login(User loginParam) {
-//获取手机号
-        String phone = loginParam.getPhone();
-        //获取验证码
-        String code = String.valueOf(loginParam.getCode());
-        log.info(code);
-        //从Redis中获取保存的验证码
-        String codeInRedis = stringRedisTemplate.opsForValue().get(PHONE_CODE + phone);
-        //进行验证码的比对（页面提交的验证码和Redis中保存的验证码比对）
-        if (codeInRedis != null && codeInRedis.equals(code)) {
-            //如果能够比对成功，说明登录成功
-            LambdaQueryWrapper<User> queryWrapper = new LambdaQueryWrapper<>();
-            queryWrapper.eq(User::getPhone, phone);
+    public Result getSessionId(String code) {
+        /**
+         * 1.拼接url,微信登陆凭证校验接口
+         * 2.发起一个http的调用,获取微信的返回结果
+         * 3.生成一个sessionId,分会给前端,作为当前需要登陆的用户的标识
+         * 4.生成一个sessionId 用户带年纪微信登陆的时候,我们可以标识是谁点击微信登录
+          */
+        String url="https://api.weixin.qq.com/sns/jscode2session?appid={0}&secret={1}&js_code={2}&grant_type=authorization_code";
+        String replaceUrl = url.replace("{0}", appid).replace("{1}", secret).replace("{2}", code);
+        String res = HttpUtil.get(replaceUrl);
+        String uuid= UUID.randomUUID().toString();
+        loginInfoService.save(new LoginInfo(WX_SESSION_ID+uuid,res));
+        HashMap<String, String> map = new HashMap<>();
+        map.put("sessionId",uuid);
+        return Result.ok(map);
+    }
 
-            User user = this.getOne(queryWrapper);
-            if (user == null) {
-                //判断当前手机号对应的用户是否为新用户，如果是新用户就自动完成注册
-                user = new User();
-                user.setPhone(phone);
-                this.save(user);
+    @Override
+    public Result authLogin(WXAuth wxAuth) {
+        //1.通过wxauth中的值,要对其进行解密
+        //2.解密完成后,会获取微信用户信息没其中包含openId,性别,昵称,头像等信息
+        //3.openId 是唯一的,需要去user表中查询openId是否存在;如果存在,登陆成功
+        //4.不存在,就注册一个新用户
+        //5.使用jwt技术,生成一个token,提供给前端token令牌,用户在下次访问时可以携带同肯来访问
+        try {
+            String json = wxService.wxDecrypt(wxAuth.getEncryptedData(), wxAuth.getSessionId(), wxAuth.getIv());
+            User userInfo = JSON.parseObject(json, User.class);
+            String openId = userInfo.getOpenId();
+            LambdaQueryWrapper<User> wrapper=new LambdaQueryWrapper<>();
+            wrapper.eq(User::getOpenId,openId);
+            User user = this.getOne(wrapper);
+            if (user==null){
+                //注册
+                this.save(userInfo);
+                return Result.ok(userInfo);
+            }else {
+                //登陆成功,就返回一个openId当作key,下次可以通过这个key来获取用户信息
+                return Result.ok(user.getOpenId());
             }
-            String token = MD5Util.createUserToken(user);
-            //登录成功,就把生成得token交付给前端.
-            putUserIntoRedis(user, token);
-            return Result.ok(token);
+
+        } catch (Exception e) {
+            e.printStackTrace();
         }
-        return Result.fail("登陆失败");
+
+        return Result.fail("失败");
     }
 
-    @Override
-    public Result LoginByPassword(User loginParam) {
-        return null;
-    }
 
-    @Override
-    public Result sendMsg(String phone) {
-        if (!ObjectUtils.isEmpty(phone)) {
-            //生成随机的4位验证码
-            String code = ValidateCodeUtils.generateValidateCode(4).toString();
-            //发送短信,还需要更改
-            SMSUtils.sendMessage("PremisesRent", "SMS_272605519", phone, code);
-            //需要将生成的验证码保存到redis中进行缓存
-            stringRedisTemplate.opsForValue().set(PHONE_CODE + phone, code);
-            stringRedisTemplate.expire(PHONE_CODE + phone, 5, TimeUnit.MINUTES);
-            log.info("验证码: ${}",code);
-            return Result.ok();
-        }
-        return Result.fail("失败辣");
-    }
 
-    @Override
-    public Result register(User loginParam) {
-        String phone = loginParam.getPhone();
-        Integer code = loginParam.getCode();
-        String password = loginParam.getPassword();
-        //存储phone和code
-        if (!judgeCodeInRedis(phone,code)) {
-            return Result.fail("验证码错误");
-        }
-        //根据phone查询数据库中的用户信息
-        LambdaQueryWrapper<User> userLambdaQueryWrapper = new LambdaQueryWrapper<>();
-        userLambdaQueryWrapper.eq(User::getPhone, phone);
-        List<User> users = this.list(userLambdaQueryWrapper);
-        //不为空就直接退出
-        if (!users.isEmpty()) {
-            return Result.fail("用户已注册");
-        }
-        User user = new User();
-        user.setPassword(password);
-        user.setPhone(phone);
-        user.setNickName(loginParam.getNickName());
-        this.save(user);
-        String token = MD5Util.createUserToken(user);
-        putUserIntoRedis(user, token);
-        //将token存放到前端中
-        return Result.ok(token);
-    }
 
-    @Override
-    public Result forgetPassword(User loginParam) {
-        return null;
-    }
-    /**
-     * //这一步可以将用户的登录token放到redis中进行保存
-     */
-    private void putUserIntoRedis(User user, String token) {
-        stringRedisTemplate.opsForValue().set(USER_TOKEN + token, JSON.toJSONString(user));
-        //这一步是用来给token设置时间
-        stringRedisTemplate.expire(USER_TOKEN + token, 1, TimeUnit.HOURS);
-    }
-    private boolean judgeCodeInRedis(String phone, Integer code) {
-        String s = stringRedisTemplate.opsForValue().get(PHONE_CODE + phone);
-        if (StringUtils.isEmpty(s) || code == null || !s.equals(code.toString())) {
-            return false;
-        }
-        return true;
-    }
+
+
+
 }
+
+
