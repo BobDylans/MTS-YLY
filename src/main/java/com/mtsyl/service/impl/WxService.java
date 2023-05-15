@@ -24,6 +24,8 @@ public class WxService {
 
     public String wxDecrypt(String encryptedData, String sessionId, String vi) throws Exception {
         // 开始解密
+
+        //1.先从数据库中取出我们需要的res,并解密成openId
         LambdaQueryWrapper<LoginInfo> wrapper=new LambdaQueryWrapper<>();
         wrapper.eq(LoginInfo::getKey,WX_SESSION_ID+sessionId);
         String json = loginInfoService.getOne(wrapper).getValue();
