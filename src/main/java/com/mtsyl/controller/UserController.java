@@ -27,7 +27,6 @@ import java.util.concurrent.locks.ReentrantReadWriteLock;
  */
 @RestController
 @Slf4j
-
 @RequestMapping("/user")
 public class UserController {
     @Autowired
