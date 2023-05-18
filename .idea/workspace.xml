@@ -4,9 +4,66 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a37f8853-1987-488b-8626-a9333919e627" name="变更" comment="程子豪的第七次提交,修改了微信小程序的登录接口">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="a37f8853-1987-488b-8626-a9333919e627" name="变更" comment="程子豪的第八次提交,修改了微信小程序的登录接口">
       <change beforePath="$PROJECT_DIR$/src/main/java/com/mtsyl/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mtsyl/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mtsyl/MtsYlApplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mtsyl/common/Result.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mtsyl/config/MvcConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mtsyl/config/MybatisConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mtsyl/config/WebExceptionAdvice.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mtsyl/controller/FilmController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mtsyl/controller/HelloWeXin.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mtsyl/controller/OrderController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mtsyl/controller/UploadController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mtsyl/controller/UserController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mtsyl/controller/VoucherController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mtsyl/entity/Film.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mtsyl/entity/FilmType.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mtsyl/entity/LoginInfo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mtsyl/entity/Type.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mtsyl/entity/User.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mtsyl/entity/Voucher.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mtsyl/entity/VoucherOrder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mtsyl/entity/WXAuth.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mtsyl/entity/po/WxUserInfo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mtsyl/mapper/FileTypeMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mtsyl/mapper/FilmMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mtsyl/mapper/LoginInfoMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mtsyl/mapper/TypeMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mtsyl/mapper/UserMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mtsyl/mapper/VoucherMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mtsyl/mapper/VoucherOrderMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mtsyl/service/FilmService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mtsyl/service/FilmTypeService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mtsyl/service/LoginInfoService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mtsyl/service/TypeService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mtsyl/service/UserService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mtsyl/service/VoucherOrderService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mtsyl/service/VoucherService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mtsyl/service/impl/FilmServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mtsyl/service/impl/FilmTypeServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mtsyl/service/impl/LoginInfoServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mtsyl/service/impl/TypeServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mtsyl/service/impl/UserServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mtsyl/service/impl/VoucherOrderServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mtsyl/service/impl/VoucherServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mtsyl/service/impl/WxService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mtsyl/utils/HttpClientUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mtsyl/utils/MD5Util.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mtsyl/utils/RedisConstants.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mtsyl/utils/SMSUtils.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mtsyl/utils/UserHolder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mtsyl/utils/ValidateCodeUtils.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mtsyl/utils/WechatUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.mtsyl.MtsYlApplicationTests.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.mtsyl.MtsYlApplicationTests.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/mtsyl/CodeGet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/mtsyl/MtsYlApplicationTests.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -102,6 +159,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="MtsYlApplicationTests.contextLoads" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="MTS-YL" />
       <extension name="coverage">
@@ -193,7 +261,7 @@
       <workItem from="1684395247083" duration="1950000" />
       <workItem from="1684398375001" duration="173000" />
       <workItem from="1684399018740" duration="347000" />
-      <workItem from="1684416563241" duration="319000" />
+      <workItem from="1684416563241" duration="1212000" />
     </task>
     <task id="LOCAL-00001" summary="程子豪的第一次提交,很粗糙">
       <created>1681805633205</created>
@@ -251,7 +319,35 @@
       <option name="project" value="LOCAL" />
       <updated>1684399166162</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="程子豪的第八次提交,修改了微信小程序的登录接口">
+      <created>1684416907271</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1684416907271</updated>
+    </task>
+    <task id="LOCAL-00010" summary="程子豪的第八次提交,修改了微信小程序的登录接口">
+      <created>1684416956120</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1684416956120</updated>
+    </task>
+    <task id="LOCAL-00011" summary="程子豪的第八次提交,修改了微信小程序的登录接口">
+      <created>1684417064795</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1684417064795</updated>
+    </task>
+    <task id="LOCAL-00012" summary="程子豪的第八次提交,修改了微信小程序的登录接口">
+      <created>1684417153602</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1684417153602</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -277,6 +373,7 @@
     <MESSAGE value="程子豪的第五次提交" />
     <MESSAGE value="程子豪的第六次提交,修改了微信小程序的登录接口" />
     <MESSAGE value="程子豪的第七次提交,修改了微信小程序的登录接口" />
-    <option name="LAST_COMMIT_MESSAGE" value="程子豪的第七次提交,修改了微信小程序的登录接口" />
+    <MESSAGE value="程子豪的第八次提交,修改了微信小程序的登录接口" />
+    <option name="LAST_COMMIT_MESSAGE" value="程子豪的第八次提交,修改了微信小程序的登录接口" />
   </component>
 </project>
