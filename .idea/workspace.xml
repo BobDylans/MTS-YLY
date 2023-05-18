@@ -4,18 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a37f8853-1987-488b-8626-a9333919e627" name="变更" comment="程子豪的第五次提交">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mtsyl/controller/HelloWeXin.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mtsyl/utils/HttpClientUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mtsyl/utils/WechatUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+    <list default="true" id="a37f8853-1987-488b-8626-a9333919e627" name="变更" comment="程子豪的第六次提交,修改了微信小程序的登录接口">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/mtsyl/entity/po/WxUserInfo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/mtsyl/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mtsyl/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mtsyl/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mtsyl/service/impl/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mtsyl/service/impl/WxService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mtsyl/service/impl/WxService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mtsyl/service/impl/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mtsyl/service/impl/UserServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mtsyl/service/impl/WxService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mtsyl/service/impl/WxService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mtsyl/utils/WechatUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mtsyl/utils/WechatUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/mtsyl/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mtsyl/controller/UserController.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -111,17 +105,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="MtsYlApplicationTests.contextLoads" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="MTS-YL" />
       <extension name="coverage">
@@ -206,7 +189,12 @@
       <workItem from="1683004796237" duration="608000" />
       <workItem from="1683170692232" duration="779000" />
       <workItem from="1684117816170" duration="600000" />
-      <workItem from="1684139679833" duration="1342000" />
+      <workItem from="1684139679833" duration="2715000" />
+      <workItem from="1684150677240" duration="321000" />
+      <workItem from="1684321574721" duration="70000" />
+      <workItem from="1684321660009" duration="3000" />
+      <workItem from="1684395247083" duration="1950000" />
+      <workItem from="1684398375001" duration="173000" />
     </task>
     <task id="LOCAL-00001" summary="程子豪的第一次提交,很粗糙">
       <created>1681805633205</created>
@@ -250,7 +238,14 @@
       <option name="project" value="LOCAL" />
       <updated>1683001504499</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="程子豪的第六次提交,修改了微信小程序的登录接口">
+      <created>1684141260150</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1684141260150</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -274,6 +269,7 @@
     <MESSAGE value="程子豪的第三次提交" />
     <MESSAGE value="程子豪的第三次提交 有注释版" />
     <MESSAGE value="程子豪的第五次提交" />
-    <option name="LAST_COMMIT_MESSAGE" value="程子豪的第五次提交" />
+    <MESSAGE value="程子豪的第六次提交,修改了微信小程序的登录接口" />
+    <option name="LAST_COMMIT_MESSAGE" value="程子豪的第六次提交,修改了微信小程序的登录接口" />
   </component>
 </project>

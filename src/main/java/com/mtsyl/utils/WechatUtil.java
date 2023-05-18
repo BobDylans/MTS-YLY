@@ -10,7 +10,7 @@ public class WechatUtil {
     private static final String appid ="wx4d0bf0137e54de77";
     private static final String secret="fb20f9420989effbd6ffe3ad6c768f2d";
 
-    public static com.alibaba.fastjson2.JSONObject getSessionKeyOrOpenId(String code) {
+    public static JSONObject getSessionKeyOrOpenId(String code) {
         String requestUrl = "https://api.weixin.qq.com/sns/jscode2session";
         Map<String, String> requestUrlParam = new HashMap<>();
         // https://mp.weixin.qq.com/wxopen/devprofile?action=get_profile&token=164113089&lang=zh_CN
