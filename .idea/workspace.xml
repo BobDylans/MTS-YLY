@@ -4,12 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a37f8853-1987-488b-8626-a9333919e627" name="变更" comment="程子豪的第六次提交,修改了微信小程序的登录接口">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/mtsyl/entity/po/WxUserInfo.java" afterDir="false" />
+    <list default="true" id="a37f8853-1987-488b-8626-a9333919e627" name="变更" comment="程子豪的第七次提交,修改了微信小程序的登录接口">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/mtsyl/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mtsyl/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mtsyl/utils/WechatUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mtsyl/utils/WechatUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mtsyl/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/mtsyl/controller/UserController.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -195,6 +192,8 @@
       <workItem from="1684321660009" duration="3000" />
       <workItem from="1684395247083" duration="1950000" />
       <workItem from="1684398375001" duration="173000" />
+      <workItem from="1684399018740" duration="347000" />
+      <workItem from="1684416563241" duration="319000" />
     </task>
     <task id="LOCAL-00001" summary="程子豪的第一次提交,很粗糙">
       <created>1681805633205</created>
@@ -245,7 +244,14 @@
       <option name="project" value="LOCAL" />
       <updated>1684141260150</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="程子豪的第七次提交,修改了微信小程序的登录接口">
+      <created>1684399166162</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1684399166162</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -270,6 +276,7 @@
     <MESSAGE value="程子豪的第三次提交 有注释版" />
     <MESSAGE value="程子豪的第五次提交" />
     <MESSAGE value="程子豪的第六次提交,修改了微信小程序的登录接口" />
-    <option name="LAST_COMMIT_MESSAGE" value="程子豪的第六次提交,修改了微信小程序的登录接口" />
+    <MESSAGE value="程子豪的第七次提交,修改了微信小程序的登录接口" />
+    <option name="LAST_COMMIT_MESSAGE" value="程子豪的第七次提交,修改了微信小程序的登录接口" />
   </component>
 </project>

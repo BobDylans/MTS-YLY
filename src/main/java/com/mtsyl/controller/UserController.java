@@ -64,8 +64,16 @@ public class UserController {
             user.setNickName(wxUserInfo.getNickName());
             user.setPhone(wxUserInfo.getPhone());
             userService.save(user);
+        }else{
+            user.setOpenId(openid);
+            user.setNickName(wxUserInfo.getNickName());
+            user.setPhone(wxUserInfo.getPhone());
+            userService.updateById(user);
         }
-        return Result.ok(user);
+
+        Map<String,Object> resultMap = new HashMap<>();
+        resultMap.put("openId",openid);
+        return Result.ok(resultMap);
     }
 
 
