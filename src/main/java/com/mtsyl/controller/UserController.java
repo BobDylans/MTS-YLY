@@ -1,6 +1,4 @@
 package com.mtsyl.controller;
-
-
 import cn.hutool.http.HttpRequest;
 import com.alibaba.fastjson2.JSON;
 import com.alibaba.fastjson2.JSONObject;
@@ -12,6 +10,7 @@ import com.mtsyl.entity.User;
 import com.mtsyl.entity.WXAuth;
 import com.mtsyl.entity.po.WxUserInfo;
 import com.mtsyl.service.UserService;
+import com.mtsyl.service.impl.UserServiceImpl;
 import com.mtsyl.utils.WechatUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.catalina.connector.Response;
@@ -37,14 +36,16 @@ public class UserController {
 
 
     @PostMapping("/wx/login")
-    public Result user_login(@RequestBody WxUserInfo wxUserInfo) {
+    public Result user_login(@RequestParam("code") String code,
+                             @RequestParam("phone") String phone,
+                             @RequestParam("nickName")String nickName) {
         // 1.接收小程序发送的code
-        // 2.开发者服务器 登录凭证校验接口 appi + appsecret + code
+        // 2.开发者服务器 登录凭证校验接口code
         String requestUrl = "https://api.weixin.qq.com/sns/jscode2session";
         String jscode2sessionUrl = requestUrl
                 + "?appid=" + appid
                 + "&secret=" + secret
-                + "&js_code=" + wxUserInfo.getCode()
+                + "&js_code=" + code
                 + "&grant_type=authorization_code";
         HttpRequest result = HttpRequest.post(jscode2sessionUrl);
         String resultJSON = result.toString();
@@ -62,19 +63,26 @@ public class UserController {
             // 用户信息入库
             user = new User();
             user.setOpenId(openid);
-            user.setNickName(wxUserInfo.getNickName());
-            user.setPhone(wxUserInfo.getPhone());
+            user.setNickName(nickName);
+            user.setPhone(phone);
             userService.save(user);
         }else{
             user.setOpenId(openid);
-            user.setNickName(wxUserInfo.getNickName());
-            user.setPhone(wxUserInfo.getPhone());
+            user.setNickName(nickName);
+            user.setPhone(phone);
             userService.updateById(user);
         }
 
         Map<String,Object> resultMap = new HashMap<>();
         resultMap.put("openId",openid);
         return Result.ok(resultMap);
+    }
+
+    @PostMapping("/test")
+    public void test(@RequestParam("code") String code,
+                     @RequestParam("phone") String phone,
+                     @RequestParam("nickName")String nickName){
+        System.out.println(code+phone+nickName);
     }
 
 

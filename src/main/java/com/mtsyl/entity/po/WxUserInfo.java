@@ -4,6 +4,8 @@ import com.mtsyl.entity.User;
 import lombok.Data;
 
 @Data
-public class WxUserInfo extends User {
+public class WxUserInfo {
     private String code;
+    private String NickName;
+    private String Phone;
 }

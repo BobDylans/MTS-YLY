@@ -5,65 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a37f8853-1987-488b-8626-a9333919e627" name="变更" comment="程子豪的第八次提交,修改了微信小程序的登录接口">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/mtsyl/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mtsyl/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mtsyl/MtsYlApplication.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mtsyl/common/Result.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mtsyl/config/MvcConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mtsyl/config/MybatisConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mtsyl/config/WebExceptionAdvice.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mtsyl/controller/FilmController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mtsyl/controller/HelloWeXin.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mtsyl/controller/OrderController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mtsyl/controller/UploadController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mtsyl/controller/UserController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mtsyl/controller/VoucherController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mtsyl/entity/Film.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mtsyl/entity/FilmType.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mtsyl/entity/LoginInfo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mtsyl/entity/Type.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mtsyl/entity/User.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mtsyl/entity/Voucher.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mtsyl/entity/VoucherOrder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mtsyl/entity/WXAuth.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mtsyl/entity/po/WxUserInfo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mtsyl/mapper/FileTypeMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mtsyl/mapper/FilmMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mtsyl/mapper/LoginInfoMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mtsyl/mapper/TypeMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mtsyl/mapper/UserMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mtsyl/mapper/VoucherMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mtsyl/mapper/VoucherOrderMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mtsyl/service/FilmService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mtsyl/service/FilmTypeService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mtsyl/service/LoginInfoService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mtsyl/service/TypeService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mtsyl/service/UserService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mtsyl/service/VoucherOrderService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mtsyl/service/VoucherService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mtsyl/service/impl/FilmServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mtsyl/service/impl/FilmTypeServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mtsyl/service/impl/LoginInfoServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mtsyl/service/impl/TypeServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mtsyl/service/impl/UserServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mtsyl/service/impl/VoucherOrderServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mtsyl/service/impl/VoucherServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mtsyl/service/impl/WxService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mtsyl/utils/HttpClientUtil.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mtsyl/utils/MD5Util.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mtsyl/utils/RedisConstants.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mtsyl/utils/SMSUtils.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mtsyl/utils/UserHolder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mtsyl/utils/ValidateCodeUtils.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/mtsyl/utils/WechatUtil.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.mtsyl.MtsYlApplicationTests.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.mtsyl.MtsYlApplicationTests.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/mtsyl/CodeGet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/mtsyl/MtsYlApplicationTests.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mtsyl/entity/po/WxUserInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mtsyl/entity/po/WxUserInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mtsyl/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mtsyl/service/impl/UserServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -123,7 +69,7 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="preferences.fileTypes" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="ReactorSettings">
@@ -261,7 +207,11 @@
       <workItem from="1684395247083" duration="1950000" />
       <workItem from="1684398375001" duration="173000" />
       <workItem from="1684399018740" duration="347000" />
-      <workItem from="1684416563241" duration="1212000" />
+      <workItem from="1684416563241" duration="1594000" />
+      <workItem from="1684559865458" duration="600000" />
+      <workItem from="1685012311102" duration="348000" />
+      <workItem from="1685013034713" duration="131000" />
+      <workItem from="1685017362229" duration="3083000" />
     </task>
     <task id="LOCAL-00001" summary="程子豪的第一次提交,很粗糙">
       <created>1681805633205</created>
@@ -347,7 +297,21 @@
       <option name="project" value="LOCAL" />
       <updated>1684417153602</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="程子豪的第八次提交,修改了微信小程序的登录接口">
+      <created>1684417789289</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1684417789289</updated>
+    </task>
+    <task id="LOCAL-00014" summary="程子豪的第八次提交,修改了微信小程序的登录接口">
+      <created>1684417849119</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1684417849119</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

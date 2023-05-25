@@ -21,6 +21,7 @@ import org.apache.commons.codec.digest.DigestUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.util.ObjectUtils;
+import org.springframework.web.bind.annotation.RequestBody;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
@@ -37,6 +38,7 @@ public class UserServiceImpl extends ServiceImpl<UserMapper,User> implements Use
     LoginInfoService loginInfoService;
     @Autowired
     WxService wxService;
+
 
 
     private static final String appid ="wx4d0bf0137e54de77";
