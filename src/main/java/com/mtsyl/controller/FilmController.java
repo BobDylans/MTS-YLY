@@ -38,7 +38,7 @@ public class FilmController {
     @GetMapping("/getAll/{pageId}/{limit}")
     public Result getAllFilm(@PathVariable int pageId,@PathVariable int limit){
         //分页查询
-        Page<Film> page = filmService.page(new Page<>(pageId, limit));
+        Page<Film> page =  filmService.page(new Page<>(pageId, limit));
         return Result.ok(page);
     }
     //新增电影
