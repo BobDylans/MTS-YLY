@@ -36,10 +36,10 @@ public class FilmController {
     //分页查询全部
 
     @GetMapping("/getAll/{pageId}/{limit}")
-    public Result getAllFilm(@PathVariable int page,@PathVariable int limit){
+    public Result getAllFilm(@PathVariable int pageId,@PathVariable int limit){
         //分页查询
-        Page<Film> page1 = filmService.page(new Page<>(page, limit));
-        return Result.ok(page1);
+        Page<Film> page = filmService.page(new Page<>(pageId, limit));
+        return Result.ok(page);
     }
     //新增电影
     @PostMapping("/add")
@@ -63,6 +63,11 @@ public class FilmController {
         wrapper.eq(Film::getType,typeId);
         List<Film> filmList = filmService.list(wrapper);
         return Result.ok(filmList);
+    }
+    @GetMapping("/getAll")
+    public Result getAll(){
+        List<Film> films = filmService.list();
+        return Result.ok(films);
     }
 
 

@@ -1,25 +1,17 @@
 package com.mtsyl.controller;
 import cn.hutool.http.HttpRequest;
-import com.alibaba.fastjson2.JSON;
+import cn.hutool.http.HttpUtil;
+import cn.hutool.json.JSONUtil;
 import com.alibaba.fastjson2.JSONObject;
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
-import com.baomidou.mybatisplus.core.toolkit.Wrappers;
-import com.baomidou.mybatisplus.extension.api.R;
 import com.mtsyl.common.Result;
 import com.mtsyl.entity.User;
-import com.mtsyl.entity.WXAuth;
-import com.mtsyl.entity.po.WxUserInfo;
 import com.mtsyl.service.UserService;
-import com.mtsyl.service.impl.UserServiceImpl;
-import com.mtsyl.utils.WechatUtil;
 import lombok.extern.slf4j.Slf4j;
-import org.apache.catalina.connector.Response;
-import org.apache.commons.codec.digest.DigestUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.concurrent.locks.ReentrantReadWriteLock;
 
 /**
  * @author 20179
@@ -57,17 +49,17 @@ public class UserController {
         log.info(openid);
         // 5.根据返回的User实体类，判断用户是否是新用户，是的话，将用户信息存到数据库；
         LambdaQueryWrapper<User> wrapper = new LambdaQueryWrapper();
-        wrapper.eq(User::getOpenId, openid);
+        wrapper.eq(User::getOpenid, openid);
         User user = userService.getOne(wrapper);
         if (user == null) {
             // 用户信息入库
             user = new User();
-            user.setOpenId(openid);
+            user.setOpenid(openid);
             user.setNickName(nickName);
             user.setPhone(phone);
             userService.save(user);
         }else{
-            user.setOpenId(openid);
+            user.setOpenid(openid);
             user.setNickName(nickName);
             user.setPhone(phone);
             userService.updateById(user);
@@ -75,6 +67,7 @@ public class UserController {
 
         Map<String,Object> resultMap = new HashMap<>();
         resultMap.put("openId",openid);
+        log.info(openid);
         return Result.ok(resultMap);
     }
 

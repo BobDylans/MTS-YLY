@@ -6,6 +6,9 @@ import com.mtsyl.mapper.FilmMapper;
 import com.mtsyl.service.FilmService;
 import org.springframework.stereotype.Service;
 
+import javax.annotation.Resource;
+
 @Service
 public class FilmServiceImpl extends ServiceImpl<FilmMapper, Film> implements FilmService {
+
 }

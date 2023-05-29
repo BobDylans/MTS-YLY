@@ -1,5 +1,6 @@
 package com.mtsyl.entity;
 
+import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.AllArgsConstructor;
@@ -26,7 +27,8 @@ public class User {
     private String phone;
 
     private String password;
-    private String openId;
+    @TableField("openid")
+    private String openid;
 
 
 }

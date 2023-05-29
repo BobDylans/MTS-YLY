@@ -4,12 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a37f8853-1987-488b-8626-a9333919e627" name="变更" comment="程子豪的第八次提交,修改了微信小程序的登录接口">
+    <list default="true" id="a37f8853-1987-488b-8626-a9333919e627" name="变更" comment="程子豪的第九次提交,修改了微信小程序的登录接口">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mtsyl/controller/FilmController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mtsyl/controller/FilmController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/mtsyl/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mtsyl/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mtsyl/entity/po/WxUserInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mtsyl/entity/po/WxUserInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mtsyl/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mtsyl/entity/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mtsyl/service/impl/FilmServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mtsyl/service/impl/FilmServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/mtsyl/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mtsyl/service/impl/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mtsyl/utils/MD5Util.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mtsyl/utils/MD5Util.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,17 +105,6 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -211,7 +204,9 @@
       <workItem from="1684559865458" duration="600000" />
       <workItem from="1685012311102" duration="348000" />
       <workItem from="1685013034713" duration="131000" />
-      <workItem from="1685017362229" duration="3083000" />
+      <workItem from="1685017362229" duration="5902000" />
+      <workItem from="1685166856598" duration="849000" />
+      <workItem from="1685352756018" duration="300000" />
     </task>
     <task id="LOCAL-00001" summary="程子豪的第一次提交,很粗糙">
       <created>1681805633205</created>
@@ -311,7 +306,14 @@
       <option name="project" value="LOCAL" />
       <updated>1684417849119</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="程子豪的第九次提交,修改了微信小程序的登录接口">
+      <created>1685020575474</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1685020575474</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -338,6 +340,7 @@
     <MESSAGE value="程子豪的第六次提交,修改了微信小程序的登录接口" />
     <MESSAGE value="程子豪的第七次提交,修改了微信小程序的登录接口" />
     <MESSAGE value="程子豪的第八次提交,修改了微信小程序的登录接口" />
-    <option name="LAST_COMMIT_MESSAGE" value="程子豪的第八次提交,修改了微信小程序的登录接口" />
+    <MESSAGE value="程子豪的第九次提交,修改了微信小程序的登录接口" />
+    <option name="LAST_COMMIT_MESSAGE" value="程子豪的第九次提交,修改了微信小程序的登录接口" />
   </component>
 </project>

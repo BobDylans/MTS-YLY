@@ -79,9 +79,9 @@ public class UserServiceImpl extends ServiceImpl<UserMapper,User> implements Use
             User userInfo = JSON.parseObject(json, User.class);
 
             //从中获取到openId,并根据openId查询数据库
-            String openId = userInfo.getOpenId();
+            String openId = userInfo.getOpenid();
             LambdaQueryWrapper<User> wrapper=new LambdaQueryWrapper<>();
-            wrapper.eq(User::getOpenId,openId);
+            wrapper.eq(User::getOpenid,openId);
             User user = this.getOne(wrapper);
             //如果未查到,就根据前端传过来的数据注册一个新的
             if (user==null){
@@ -91,7 +91,7 @@ public class UserServiceImpl extends ServiceImpl<UserMapper,User> implements Use
                 return Result.ok(userInfo);
             }else {
                 //登陆成功,就返回一个openId当作key,下次可以通过这个key来获取用户信息
-                return Result.ok(user.getOpenId());
+                return Result.ok(user.getOpenid());
             }
 
         } catch (Exception e) {

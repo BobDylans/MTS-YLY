@@ -17,6 +17,6 @@ public class MD5Util {
 
     public static String createUserToken(User user) {
         UserHolder.saveUser(user);
-        return getMd5Encode(user.getOpenId() + System.currentTimeMillis());
+        return getMd5Encode(user.getOpenid() + System.currentTimeMillis());
     }
 }
