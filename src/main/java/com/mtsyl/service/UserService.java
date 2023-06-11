@@ -9,7 +9,6 @@ import com.mtsyl.mapper.UserMapper;
 public interface UserService extends IService<User> {
 
 
-    Result getSessionId(String code);
+    User findByUserNameAndPassWord(String nickName, String password);
 
-    Result authLogin(WXAuth wxAuth);
 }

@@ -59,10 +59,7 @@ public class FilmController {
     //根据电影类型进行查询
     @GetMapping("/getByType/{typeId}")
     public Result getByType(@PathVariable Integer typeId){
-        LambdaQueryWrapper<Film> wrapper=new LambdaQueryWrapper<>();
-        wrapper.eq(Film::getType,typeId);
-        List<Film> filmList = filmService.list(wrapper);
-        return Result.ok(filmList);
+        return filmService.getByType(typeId);
     }
     @GetMapping("/getAll")
     public Result getAll(){

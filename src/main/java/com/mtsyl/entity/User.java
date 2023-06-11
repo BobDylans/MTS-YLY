@@ -27,7 +27,7 @@ public class User {
     private String phone;
 
     private String password;
-    @TableField("openid")
+
     private String openid;
 
 

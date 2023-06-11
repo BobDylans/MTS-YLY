@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: com.github.binarywang:wx-java-miniapp-spring-boot-starter:4.3.4.B">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/github/binarywang/wx-java-miniapp-spring-boot-starter/4.3.4.B/wx-java-miniapp-spring-boot-starter-4.3.4.B.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/com/github/binarywang/wx-java-miniapp-spring-boot-starter/4.3.4.B/wx-java-miniapp-spring-boot-starter-4.3.4.B-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/github/binarywang/wx-java-miniapp-spring-boot-starter/4.3.4.B/wx-java-miniapp-spring-boot-starter-4.3.4.B-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
