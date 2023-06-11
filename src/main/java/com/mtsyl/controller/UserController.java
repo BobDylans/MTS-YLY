@@ -46,7 +46,7 @@ public class UserController {
     }
 
     @PostMapping("/wx/login")
-    public Result user_login(@RequestParam(value = "code") String code,
+    public Result user_login(@RequestParam(value = "js_code") String code,
                              @RequestParam(value="nickName",required = false) String nickName) {
 
         // 1.接收小程序发送的code
