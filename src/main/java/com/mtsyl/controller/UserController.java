@@ -46,14 +46,15 @@ public class UserController {
     }
 
     @PostMapping("/wx/login")
-    public Result user_login(@RequestParam(value = "code", required = false) String code) {
+    public Result user_login(@RequestParam(value = "code") String code,
+                             @RequestParam(value="nickName",required = false) String nickName) {
 
         // 1.接收小程序发送的code
         // 2.开发者服务器 登录凭证校验接口 appi + appsecret + code
+        String codeUpper = code.toUpperCase();
         JSONObject SessionKeyOpenId = WeChatUtil.getSessionKeyOrOpenId(code);
         // 3.接收微信接口服务 获取返回的参数
         String openid = SessionKeyOpenId.getString("openid");
-        String sessionKey = SessionKeyOpenId.getString("session_key");
 
         // 5.根据返回的User实体类，判断用户是否是新用户，是的话，将用户信息存到数据库；
         QueryWrapper<User> lqw = new QueryWrapper<>();
@@ -64,6 +65,7 @@ public class UserController {
 
             user = new User();
             user.setOpenid(openid);
+            user.setNickName(nickName);
             userService.save(user);
         }
         return Result.ok(user);
